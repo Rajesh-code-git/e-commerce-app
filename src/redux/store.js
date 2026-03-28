@@ -10,12 +10,11 @@ const loadCart = () => {
 
     const parsed = JSON.parse(data);
 
-    // 🔥 handle BOTH formats
     if (Array.isArray(parsed)) {
-      return { items: parsed }; // old wrong format fix
+      return { items: parsed }; 
     }
 
-    return parsed; // correct format
+    return parsed; 
   } catch {
     return { items: [] };
   }

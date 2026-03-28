@@ -2,10 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout"
-import Success from "./pages/Success";
+import Home from "./pages/Home.jsx";
+import Cart from "./pages/Cart.jsx";
+import Checkout from "./pages/Checkout.jsx";
+import Success from "./pages/Success.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
