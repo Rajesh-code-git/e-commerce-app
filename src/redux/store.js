@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./cartSlice";
-import productReducer from "./productslice";
+import productReducer from "./productSlice";
 
 //Load from localStorage
-const loadCart = () => {
+function loadCart() {
   try {
     const data = localStorage.getItem("cart");
     if (!data) return { items: [] };
@@ -11,14 +11,14 @@ const loadCart = () => {
     const parsed = JSON.parse(data);
 
     if (Array.isArray(parsed)) {
-      return { items: parsed }; 
+      return { items: parsed };
     }
 
-    return parsed; 
+    return parsed;
   } catch {
     return { items: [] };
   }
-};
+}
 
 // Create store
 export const store = configureStore({
